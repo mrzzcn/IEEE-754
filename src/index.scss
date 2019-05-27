@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px 20px;
+}
+
+.container {
+  .box {
+    input {
+      width: 100%;
+      padding: 6px;
+      font-size: 20px;
+    }
+  }
+
+  .formula {
+    vertical-align: middle;
+  }
+
+  .cells {
+    margin-top: 40px;
+
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+      border-top: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+
+      &:last-child {
+        border-bottom: 1px solid #ddd;
+      }
+    }
+
+    .cell {
+      padding: 4px;
+      border-left: 1px solid #ddd;
+      color: #5a3921;
+      text-align: center;
+      flex: 1 1 auto;
+
+      &.cell-sign,
+      &.cell-sign-dex {
+        background-color: #4be3ac;
+      }
+
+      &.cell-exponent,
+      &.cell-exponent-dex {
+        background-color: #ff8a5c;
+        border-top-color: #ff8a5c;
+      }
+
+      &.cell-exponent-dex {
+        flex-basis: 20px * 21;
+      }
+
+      &.cell-mantissa,
+      &.cell-mantissa-dex {
+        background-color: #ee5a5a;
+      }
+
+      &.cell-mantissa-dex {}
+
+      &.cell-value {
+        background-color: #33313b;
+        color: #FFF;
+      }
+
+      &:nth-of-child(64),
+      &.cell-mantissa-dex,
+      &.cell-value {
+        border-right-width: 1px;
+      }
+    }
+  }
+}
